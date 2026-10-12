@@ -1,0 +1,114 @@
+.pricing-plan {
+    background-color: $white3; 
+    &-inner {
+        width: 70%;
+        margin: auto;
+        display: flex;
+
+        &-columns { 
+            width: 33.33%;    
+            padding: 10px 20px 20px 20px;
+            margin: 0 10px;
+            position: relative;
+            background-color: $white;
+            z-index: 0;
+            overflow: hidden;
+            @include transition($transition);
+      
+            &:hover, &.active {
+                transform: scale(1.1);
+                z-index: 9;
+                box-shadow: 0 0 25px 2px rgba($maincolor, .2);
+                .table-list {
+                    transform: none; 
+                }
+                .pricing-title {
+                    transform: none; 
+                }
+                .price {
+                    transform: none; 
+                }
+                .date-line { 
+                    transform: none; 
+                }
+                .main-btn-wrap {                   
+                    .main-btn {
+                        background-color: var(--main-color-one);
+                        color: $white;
+                        border: none !important;
+                        box-shadow: 0px 6px 20px -8px rgba($maincolor, 0.9);
+                        &:hover {
+                            box-shadow: 0px 10px 20px -8px var(--main-color-one);
+                        }
+                    }
+                }
+            }
+            .popularity {
+                color: $white;
+                background-color: var(--main-color-one);
+                padding: 4px 20px;
+                text-transform: uppercase;
+                font-size: 8px;
+                line-height: 20px;
+                font-weight: 400;
+                letter-spacing: 1px;
+                display: table;
+                transform: rotate(45deg);
+                top: 18px;
+                position: absolute;
+                right: -28px;
+                @include transition($transition);
+                // display: none;
+            }
+            .pricing-icon {
+                font-size: 50px;
+            }
+            .pricing-title {
+                color: $black1;
+                font-size: 30px;
+                line-height: 40px;
+                font-family: var(--body-font);
+                font-weight: 800;
+            }
+            .price {
+                color: var(--main-color-one);
+                font-size: 46px;
+                line-height: 58px;
+                font-family: var(--body-font);
+                font-weight: 500;                
+            }
+            .date-line {
+                color: $black3;
+                font-size: 15px;
+                line-height: 26px;
+                font-family: var(--menu-font);
+                font-weight: 400;
+            }
+            .table-list {
+                padding: 0;
+                list-style: none;               
+                .list-items {
+                    color: $black3;
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-family: var(--body-font);
+                    font-weight: 400;
+                    padding-top: 8px;
+                    .icon {
+                        color: $black1;
+                        padding-right: 8px;
+                        font-size: 10px;
+                        font-weight: 800;
+                    }
+                    &:after {
+                        content: '';
+                        display: block;
+                        height: 1px;
+                        margin-top: 8px;
+                        background-image: linear-gradient(90deg, $white 0%, $white6 53%, $white 100%);
+                    }               
+                }
+            }
+        }
+    }
+}

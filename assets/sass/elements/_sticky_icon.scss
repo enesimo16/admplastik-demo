@@ -1,0 +1,36 @@
+.side-form-icons {
+    float: right;
+    position: sticky;
+    top: 6vh;
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    box-shadow: -2px 0px 8px 0px rgba($black1, 0.16);
+    padding: 6px 0;
+    z-index: 999;
+    right: 50px;
+    width: 42px;
+    text-align: center;
+    transition: all 0.3s ease-in;
+
+    .icon {
+        color: $black1;
+        padding: 4px 7px;
+        display: block;
+        font-size: 22px;
+        cursor: pointer;
+        transition: .5s;
+        &:hover {
+           color: var(--main-color-one);
+        }      
+    }
+}
+#open-contact-popup,
+#open-message-popup,
+#open-location-popup {
+    &.active {
+        color: var(--main-color-one);      
+    }
+}
+
+

@@ -1,0 +1,80 @@
+.our-process-section {
+    background-color: $black1;
+    &.style-02 {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-color: transparent;
+        min-height: 900px;
+        .section-title {
+            .title{
+                color: $gray;  
+                &::before {
+                    background-color: $gray;
+                }  
+                &::after {
+                    background-color: $gray;   
+                }
+            }
+        }        
+        .our-process-section__work-items{          
+            .items-number{
+                color: $white7;
+                text-shadow: 0 2px 6px rgba($black0, .20);             
+            }
+            .work-tiems-inner{
+                .items-title {
+                    color: $black1;                    
+                }
+                p{
+                    color: $black3;
+                    line-height: 24px;
+                }
+            }
+        }   
+     
+    }
+    /*---Style 02 End---*/
+    .section-title-wrap {       
+        width: 100%;      
+    }
+    &__work-items { 
+        z-index: 2;
+        position: relative;  
+        &:hover {
+            .items-number {                
+                transform: translateY(0); 
+            }
+        }
+        .items-number {
+            color: rgba($white, .20);
+            font-size: 100px;
+            line-height: 120px;
+            font-family: var(--body-font);
+            font-weight: 700;            
+            transform: translateY(32%); 
+            position: relative;
+            z-index: -1;
+            @include transition($transition); 
+        }
+        .work-tiems-inner {         
+            .items-title {
+                color: $white;
+                font-size: 22px;
+                line-height: 30px;
+                font-family: var(--body-font);
+                font-weight: 600;
+                margin: 0;
+            }
+            p {
+                color: $white4;
+                font-size: 14px;
+                line-height: 30px;
+                font-family:  var(--body-font);
+                font-weight: 400;
+                margin-bottom: 0;
+            }
+        }
+
+    }
+}

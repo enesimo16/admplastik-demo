@@ -1,0 +1,133 @@
+.testimonial-section {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    z-index: 0;
+    position: relative;
+    .section-title{
+        p {
+            color: $white;
+        }
+    } 
+}
+.h5-testimonial-inner {  
+    position: relative;
+    border-radius: 4px;
+    padding: 25px 50px;
+    margin-top: 30px;
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        width: 100%;
+        height: 82%;
+        display: block;
+        background-color: $white;
+        box-shadow: 0 3px 16px#2d6a284D;
+    }
+    &::after {
+        position: absolute;
+        left: 10%;
+        bottom: 41px;
+        margin: auto;
+        border-radius: 0 0 4px 4px;
+        content: '';
+        width: 80%;
+        height: 90px;
+        background-color: $white;
+        display: block;
+        z-index: -1;
+    }
+    .slider-arrow {
+        display: flex;
+        justify-content: space-between;
+        width: 120%;
+        position: absolute;
+        left: -10%;
+        top: 40%;
+        transform: translateY(-50%);
+        
+        .slick-next, .slick-prev {
+            cursor: pointer;
+            color: $white;
+            font-size: 25px;
+            position: relative;
+            &::before {
+                position: absolute;
+                transform: translateY(-50%);
+                content: '';
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                border-radius: 50%;
+                background-color: var(--main-color-one);
+                transition: all 5s;
+                z-index: -1;
+                opacity: 0;
+                visibility: hidden;
+                @include transition($transition);
+            }
+            &:hover {
+                &::before {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+        .slick-prev {
+            &::before {
+                top: 50%;
+                left: -5px;
+            }
+        }
+        .slick-next{
+            order: 2;
+            &::before {
+                top: 50%;
+                right: -5px;               
+            }
+        }
+    }
+}
+.h5-testimonial-single-items  {
+    .icon {
+        color: var(--main-color-one);
+        font-size: 30px;            
+    }
+    p {
+        color: $black3;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 400;
+        margin: 0;
+    }
+    .author-meta {
+        padding-bottom: 20px;
+        .name {
+            color: var(--main-color-one);
+            font-size: 22px;
+            line-height: 32px;
+            font-weight: 600;
+        }
+        .designation {
+            color: $black3;
+            font-size: 14px;
+            line-height: 26px;
+            font-weight: 400;
+        }
+    }
+    .thumb {
+        img {
+            border: 2px solid $white;
+            max-width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto;
+            background-color: #DBE3E9;
+        }
+    }
+}

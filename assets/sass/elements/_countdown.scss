@@ -1,0 +1,51 @@
+.countdown {
+    display: table;
+    margin: auto;
+    background-color: rgba($maincolor, .30);
+    padding: 30px 40px;
+    text-align: center;
+    &__item {
+        border-right: 1px solid rgba($white, 0.4);
+        margin-right: 40px;
+        padding-right: 40px;
+        position: relative;
+        float: left;
+        &:last-child {
+            border-right: none;
+            margin-right: 0;
+            padding-right: 0;
+        }
+        &:not(:last-child){
+            &::after {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -1px;
+                content: '';
+                width: 1px;
+                height: 50px;
+                background-color: $white;
+                display: block;
+            }
+        }
+
+    }
+    &__lg-text {
+        font-size: 50px;
+        line-height: 50px;
+        font-weight: 600;
+        color: $white;
+    }
+    &__sm-text {
+        font-size: 14px;
+        line-height: 24px;
+        color: $white;
+        text-transform: uppercase;
+    }
+    &--alt {
+        margin-bottom: 0 !important;
+    } 
+}
+.black-bg {
+    background-color: $black1;
+}

@@ -1,0 +1,118 @@
+.about-story-section {
+    .paragraph {
+        p {
+            color: $black3;
+            font-size: 14px;
+            line-height: 30px;
+            font-weight: 400;
+        }
+    }
+    .thumb {
+        float: right;
+        &:hover {
+            &::before {
+                width: 100%;
+                height: 100%;
+            }
+            &::after {
+                width: 100%;
+                height: 100%;  
+            }
+        }    
+        position: relative;  
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            z-index: 1;
+            background-color: rgba($black3, 0.1);
+            transition: all 0.8s;
+            display: block;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            background-color:  rgba($black3, 0.1);
+            transition: all 0.8s;
+            display: block;
+        }
+    }
+}
+
+/*----------------------------------
+        Our Mission Section
+------------------------------------*/
+.our-mission-section {
+    &__left{
+        display: flex;
+        flex-wrap: wrap;
+        &__items {
+            max-width: 350px;
+            width: 50%;
+            background-color: $black1;
+            color: $white;
+            padding: 45px 35px 0 35px;
+            overflow: hidden;
+            &:hover {
+                .items-number {
+                    transform: translate(0, 0);
+                } 
+            }
+            .items-title {
+                color: $white;
+                font-size: 30px;
+                line-height: 40px;
+                font-family: var(--body-font);
+                font-weight: 700;
+            }
+            p{
+                color: $white;
+                font-size: 14px;
+                line-height: 24px;
+                font-family: var(--body-font);
+                font-weight: 400;
+            }
+            .items-number {
+                color:rgba(255, 255, 255, 0.2);
+                font-size: 140px;
+                line-height: 150px;
+                font-family: var(--body-font);
+                font-weight: 700;
+                transition: all 0.3s ease-in;
+                display: flex;
+                justify-content: flex-end;
+                transform: translate(17%, 17%);
+            }
+            &.white {
+                background-color: $white;
+                padding: 0 0 35px 20px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+            }
+            &.borderr {
+                border-top: 1px solid rgba($white3, .1);
+                border-right: 1px solid rgba($white3, .1);
+            }
+        }
+    }
+    &__right {
+        margin-top: 30px;
+
+        .paragraph {
+            color: $black3;
+            font-size: 14px;
+            line-height: 24px;
+            font-family: var(--body-font);
+            font-weight: 400;
+        }
+    }
+
+}

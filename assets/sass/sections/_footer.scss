@@ -1,0 +1,154 @@
+/*-------------------------
+    Footer Area
+-------------------------*/
+
+.footer-area{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+    background-color: rgba($black1, 0.99);
+
+    .banner__header__follow_us ul li .icon {
+        color: $black1 !important;
+        font-size: 12px;
+        color: $white;
+    }
+    &.style-02 {
+        .footer-top  {
+            border-bottom: 1px solid rgba($white, .2);
+            .container {
+                border-left: 1px solid rgba($white, .2);
+                border-right: 1px solid rgba($white, .2);  
+            }
+        }
+        .footer-subscribe-area {
+            background-color: $white;
+            width: 50%;
+            padding: 0 120px 100px 120px;           
+            margin: -50px auto;
+            z-index: 1;
+            .title {
+                padding-bottom: 40px;
+                color: $black1;
+                font-size: 29px;
+                line-height: 40px;
+                font-weight: 700;
+                font-family: var(--body-font);
+                text-align: center;
+                
+            }
+            .input-group {
+                background-color: $white3;
+                padding: 15px 15px;
+                .form-control {
+                    background-color: transparent;
+                    &::placeholder{
+                        color: $gray;
+                        font-size: 16px;
+                        line-height: 35px;
+
+                    }
+                }
+            }
+
+            .input-group-text {
+               input[type="submit"] {
+                    background-color: transparent;
+                    border: none;
+                    color: $white;
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-family: var(--body-font);
+                    font-weight: 400;
+
+                }
+            }
+        }
+        .copyright-area {
+            padding: 0;
+            .container {
+                border-left: 1px solid rgba($white, .2);
+                border-right: 1px solid rgba($white, .2);
+            }
+            .copyright-area-inner {
+                padding: 20px 0;
+            }
+        }
+    }
+}
+.footer-top  {
+    .contact-area {
+        .icon {
+            padding-right: 10px;
+            float: left;
+        }
+    }
+    .widget.footer-widget p {
+       font-size: 14px;
+       line-height: 30px;
+       font-weight: 400;
+    }
+    .widget .widget-title {
+        font-family: var(--body-font);
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .widget.widget_nav_menu ul li {
+        font-size: 15px;
+        font-weight: 400;
+        font-family: var(--body-font);
+    }
+    .widget-top {
+        color: $white;
+        .contact-info-name {
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 200;
+        }
+        .contact-info {
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+    }
+    .input-group {  
+        .form-control{
+            border-radius: 0;
+            height: 50px;
+            border: none;
+        }     
+        .form-control::placeholder{
+            color: $white2;
+            font-size: 12px;
+            line-height: 40px;
+            font-family: var(--body-font);
+            font-weight: 400;
+        }
+    }
+    .input-group-text {
+        background-color: var(--main-color-one);
+        border: none;
+        border-radius: 0;
+        font-size: 23px;
+        cursor: pointer;
+        button {
+            background-color: transparent;
+            border: none;
+            color: $white;
+        }
+     }
+    
+}
+
+.copyright-area{
+   color: $white;
+   font-size: 15px;
+   line-height: 24px;
+   font-family: var(--menu-font);
+   font-weight: 400;
+   .coypright-icon {
+       color: var(--main-color-one);
+       font-size: 15px;
+       margin: 0 10px;
+   }
+}

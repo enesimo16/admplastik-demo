@@ -1,0 +1,50 @@
+.common-rating-style {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    transform: rotateY(180deg);
+    &.left {
+        justify-content: flex-end;
+    }
+    input {
+        display: none;
+        justify-content: center;
+        &:checked ~ label::after {
+            opacity: 1; 
+        }
+    }
+    label {
+        display: block;
+        cursor: pointer;
+        width: 15px;   
+        margin: 0 3px;    
+        &:hover {
+            ~ label::after {
+                opacity: 1;  
+            }
+            &::after {
+                opacity: 1;
+            }
+        }
+        &::before {
+            content: '\f135';
+            font-family: Flaticon;
+            position: relative;
+            display: block;
+            font-size: 15px;
+            color: $gray;
+        }
+        &::after {
+            content: '\f135';
+            font-family: Flaticon;
+            position: absolute;
+            display: block;
+            font-size: 15px;
+            color: var(--main-color-one);
+            top: 0;
+            opacity: 0;
+            @include transition($transition);
+            text-shadow: 0 2px 5px rgba(0,0,0, .5);
+        }
+    }
+}

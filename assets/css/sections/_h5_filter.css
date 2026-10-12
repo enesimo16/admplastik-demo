@@ -1,0 +1,22 @@
+.horizontal-scroll .button-group {
+  display: inline-block;
+  border-bottom: 2px solid rgba(255, 134, 134, 0.3);
+  padding: 0;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in; }
+
+.horizontal-scroll .button-group .button.is-checked {
+  border-bottom: 2px solid #FF8686;
+  margin-bottom: -2px; }
+
+.horizontal-scroll .button-group .button {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  color: #626262;
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 500;
+  font-family: var(--heading-font);
+  padding: 10px 30px; }

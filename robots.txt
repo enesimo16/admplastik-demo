@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /adminx/
+Allow: /
+
+Sitemap: https://www.admplastik.com.tr/sitemap.xml

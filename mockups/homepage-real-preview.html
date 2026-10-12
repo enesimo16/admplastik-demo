@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+<title>ADM Plastik — index.php ile aynı yapı (önizleme)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/redesign.css">
+<style>
+  body { margin:0; }
+  .note { background:#111; color:#fff; font:13px monospace; padding:8px 16px; text-align:center; }
+</style>
+</head>
+<body>
+<div class="note">Bu dosya gerçek index.php ile AYNI redesign.css'i kullanıyor — production görünümü budur (metinler örnek, gerçek DB verisiyle değişecek)</div>
+<div class="rd-page">
+
+  <header class="rd-header">
+    <a class="rd-logo" href="#"><img src="../uploads/site_logo_2521928550.png" alt="ADM Plastik" style="height:40px"></a>
+    <ul class="rd-nav">
+      <li><a href="#">Ana Sayfa</a></li>
+      <li class="menu-item-has-children"><a href="#">Kurumsal</a>
+        <ul class="sub-menu">
+          <li><a href="#">Hakkımızda</a></li>
+          <li><a href="#">Misyonumuz &amp; Vizyonumuz</a></li>
+          <li><a href="#">Sertifikalar</a></li>
+        </ul>
+      </li>
+      <li class="menu-item-has-children"><a href="#">Üretim</a>
+        <ul class="sub-menu">
+          <li><a href="#">Otomotiv</a></li>
+          <li><a href="#">İş ve Tarım Makinaları</a></li>
+          <li><a href="#">Raylı Sistemler</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Ürünler</a></li>
+      <li class="menu-item-has-children"><a href="#">Yetkinlikler</a>
+        <ul class="sub-menu">
+          <li><a href="#">AR-GE</a></li>
+          <li><a href="#">Mühendislik</a></li>
+          <li><a href="#">Laboratuvar</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Yönetim Sistemleri</a></li>
+      <li><a href="#">İletişim</a></li>
+    </ul>
+    <button class="rd-nav-toggle" type="button" onclick="document.querySelector('.rd-nav').classList.toggle('rd-nav-open')">☰</button>
+  </header>
+
+  <section class="rd-hero">
+    <div class="rd-hero-content">
+      <span class="rd-eyebrow">MÜHENDİSLİK PLASTİKLERİNDE ÇÖZÜM ORTAĞINIZ</span>
+      <h1>Otomotivden raylı sistemlere, mühendislik plastikleri üretiyoruz</h1>
+      <p>AR-GE ve mühendislik gücümüzle otomotiv, iş ve tarım makinaları, raylı sistemler sektörlerine yüksek performanslı plastik parça çözümleri sunuyoruz. (slider tablosundan gelecek)</p>
+      <a href="#" class="rd-btn-primary">Ürünlerimizi Keşfedin</a>
+    </div>
+    <div class="rd-hero-image rd-ph" style="height:400px">Slider görseli (slider.banner)</div>
+  </section>
+
+  <div class="rd-overlap-cards">
+    <div class="rd-overlap-card">
+      <h3>Teklif Alın</h3>
+      <p>Uzman ekibimizden hızlı teklif isteyin.</p>
+      <a class="rd-link" href="#">Teklif Formu →</a>
+    </div>
+    <div class="rd-overlap-card">
+      <h3>Kalite Sertifikalarımız</h3>
+      <p>ISO 9001:2015 ve diğer belgelerimiz.</p>
+      <a class="rd-link" href="#">Sertifikaları Gör →</a>
+    </div>
+    <div class="rd-overlap-card">
+      <h3>Ürün Kataloğu</h3>
+      <p>Tüm ürün gamımızı PDF olarak indirin.</p>
+      <a class="rd-link" href="#">Kataloğu İndir →</a>
+    </div>
+  </div>
+
+  <section class="rd-trust-stats">
+    <div class="rd-stat"><div class="rd-num">25+</div><div class="rd-label">Yıllık Tecrübe</div></div>
+    <div class="rd-stat"><div class="rd-num">150+</div><div class="rd-label">Uzman Çalışan</div></div>
+    <div class="rd-stat"><div class="rd-num">3</div><div class="rd-label">Sektöre Hizmet</div></div>
+    <div class="rd-stat"><div class="rd-num">%100</div><div class="rd-label">Yerli Üretim</div></div>
+    <div style="font-size:11px;color:#999;width:100%;text-align:center;margin-top:8px">↑ counter tablosundan (admin panelden düzenlenebilir)</div>
+  </section>
+
+  <section class="rd-block rd-tinted">
+    <div class="rd-container">
+      <div class="rd-section-heading">
+        <span class="rd-eyebrow" style="color:var(--rd-green-dark)">ÇÖZÜM ALANLARIMIZ</span>
+        <h2>Sektörünüze özel plastik mühendisliği</h2>
+      </div>
+      <div class="rd-cards-row">
+        <a class="rd-sector-card" href="#">
+          <div class="rd-ph" style="height:180px">post_services #1 banner</div>
+          <h3>Otomotiv</h3>
+          <p>Otomotiv sanayi için yüksek dayanıklılıkta plastik parça üretimi.</p>
+          <span class="rd-link">Detaylı Bilgi →</span>
+        </a>
+        <a class="rd-sector-card" href="#">
+          <div class="rd-ph" style="height:180px">post_services #2 banner</div>
+          <h3>İş ve Tarım Makinaları</h3>
+          <p>Ağır hizmet tipi makina ekipmanları için mühendislik çözümleri.</p>
+          <span class="rd-link">Detaylı Bilgi →</span>
+        </a>
+        <a class="rd-sector-card" href="#">
+          <div class="rd-ph" style="height:180px">post_services #3 banner</div>
+          <h3>Raylı Sistemler</h3>
+          <p>Raylı sistem üreticilerine özel sertifikalı plastik bileşenler.</p>
+          <span class="rd-link">Detaylı Bilgi →</span>
+        </a>
+      </div>
+      <div style="font-size:11px;color:#999;margin-top:16px">↑ posts tablosu, post_type=post_services (admin panelden düzenlenebilir)</div>
+    </div>
+  </section>
+
+  <section class="rd-block rd-white">
+    <div class="rd-container">
+      <div class="rd-section-heading">
+        <span class="rd-eyebrow" style="color:var(--rd-green-light)">ÜRÜNLERİMİZ</span>
+        <h2>Öne çıkan ürünler</h2>
+      </div>
+      <div class="rd-products-row">
+        <a class="rd-product-card" href="#"><div class="rd-ph" style="height:180px">Ürün 1</div><h3>Ürün Adı 1</h3><span class="rd-link">İncele →</span></a>
+        <a class="rd-product-card" href="#"><div class="rd-ph" style="height:180px">Ürün 2</div><h3>Ürün Adı 2</h3><span class="rd-link">İncele →</span></a>
+        <a class="rd-product-card" href="#"><div class="rd-ph" style="height:180px">Ürün 3</div><h3>Ürün Adı 3</h3><span class="rd-link">İncele →</span></a>
+        <a class="rd-product-card" href="#"><div class="rd-ph" style="height:180px">Ürün 4</div><h3>Ürün Adı 4</h3><span class="rd-link">İncele →</span></a>
+      </div>
+      <div style="font-size:11px;color:#999;margin-top:16px">↑ posts tablosu, post_type=post_products, home_status=1 (öne çıkanlar admin panelden seçilir)</div>
+    </div>
+  </section>
+
+  <section class="rd-block rd-tinted rd-why-section">
+    <div class="rd-ph" style="height:320px">Görsel</div>
+    <div class="rd-why-content">
+      <span class="rd-eyebrow" style="color:var(--rd-green-dark)">NEDEN ADM PLASTİK</span>
+      <h2>Kalite ve mühendislikte fark yaratıyoruz</h2>
+      <ul class="rd-why-points">
+        <li>ISO 9001:2015 Kalite Yönetim Sistemi</li>
+        <li>Kendi bünyesinde AR-GE ve mühendislik ekibi</li>
+        <li>Sektöre özel test ve laboratuvar imkanları</li>
+        <li>Sosyal uygunluk ve çevre politikaları</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="rd-block rd-export-map">
+    <div class="rd-container">
+      <div class="rd-section-heading">
+        <span class="rd-eyebrow">GLOBAL VARLIĞIMIZ</span>
+        <h2>40+ ülkeye ihracat yapıyoruz</h2>
+      </div>
+      <div class="rd-map-area"><span>[ Dünya Haritası — İhracat Yapılan Ülkeler İşaretli ]</span></div>
+    </div>
+  </section>
+
+  <section class="rd-block rd-white">
+    <div class="rd-container">
+      <div class="rd-section-heading">
+        <span class="rd-eyebrow" style="color:var(--rd-green-light)">GÜNCEL</span>
+        <h2>Son projeler ve haberler</h2>
+      </div>
+      <div class="rd-carousel-row">
+        <a class="rd-blog-card" href="#"><div class="rd-ph" style="height:180px">Haber 1</div><h3>Haber Başlığı 1</h3><span class="rd-link">Devamını Oku →</span></a>
+        <a class="rd-blog-card" href="#"><div class="rd-ph" style="height:180px">Haber 2</div><h3>Haber Başlığı 2</h3><span class="rd-link">Devamını Oku →</span></a>
+        <a class="rd-blog-card" href="#"><div class="rd-ph" style="height:180px">Haber 3</div><h3>Haber Başlığı 3</h3><span class="rd-link">Devamını Oku →</span></a>
+        <a class="rd-blog-card" href="#"><div class="rd-ph" style="height:180px">Haber 4</div><h3>Haber Başlığı 4</h3><span class="rd-link">Devamını Oku →</span></a>
+      </div>
+      <div class="rd-scroll-hint">← Kartları kaydırmak için sürükleyin →</div>
+      <div style="font-size:11px;color:#999;margin-top:8px">↑ posts tablosu, post_type=post_post, home_status=1</div>
+    </div>
+  </section>
+
+  <section class="rd-contact-cta">
+    <h2>Projeniz için birlikte çalışalım</h2>
+    <p>Uzman ekibimizden teklif alın, ihtiyacınıza özel çözüm sunalım.</p>
+    <a href="#" class="rd-btn-white">Teklif Al</a>
+  </section>
+
+  <footer class="rd-footer">
+    <div class="rd-container rd-footer-cols">
+      <div class="rd-footer-col rd-brand">
+        <img src="../uploads/site_logo_2521928550.png" alt="ADM Plastik" style="height:32px;margin-bottom:12px">
+        <p>Ovaakça Santral Mh. Istanbul Cd. No:646/C<br>Osmangazi / Bursa</p>
+        <div class="rd-footer-social"><a href="#">f</a><a href="#">t</a><a href="#">in</a></div>
+      </div>
+      <div class="rd-footer-col">
+        <h4>Menü</h4>
+        <ul><li><a href="#">Hakkımızda</a></li><li><a href="#">Ürünler</a></li><li><a href="#">Kalite Politikası</a></li><li><a href="#">Sertifikalar</a></li><li><a href="#">İletişim</a></li></ul>
+      </div>
+      <div class="rd-footer-col">
+        <h4>İletişim</h4>
+        <ul><li><a href="#">0224 362 39 75</a></li><li><a href="#">info@admplastik.com.tr</a></li></ul>
+      </div>
+    </div>
+    <div class="rd-container">
+      <hr class="rd-footer-divider">
+      <div class="rd-copyright">© ADM Plastik. Tüm hakları saklıdır.</div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

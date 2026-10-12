@@ -1,0 +1,210 @@
+/*-------------------------------------
+    Main BTN Design
+---------------------------------------*/
+.main-btn-wrap {
+    .main-btn {
+        min-width: 180px;
+        background-color: var(--main-color-one);
+        color: $white;
+        padding: 10px 16px;
+        text-align: center;
+        border-radius: 30px;
+        font-size: 13px;
+        display: inline-block;
+        text-transform: capitalize;
+        font-family: var(--body-font);
+        font-weight: 500;
+        box-shadow: 0px 6px 20px -8px rgba($maincolor, 0.9);
+        @include transition($transition);
+        &:hover {
+            box-shadow: 0px 10px 20px -8px var(--main-color-one);
+            background-color: var(--main-color-one);
+        }
+        &.small {
+            min-width: 85px;
+            padding: 8px 0px;
+        }
+        &.ls {
+            min-width: 130px;
+            padding: 8px 8px; 
+        }
+        &.uppercase {
+            text-transform: uppercase;
+        }
+        &.border {
+            border: 1px solid $maincolor;
+            background-color: transparent;
+            color: var(--main-color-one);
+            box-shadow: none;
+        }
+        &.black {
+            background-color: $black1;
+            box-shadow: 0px 6px 20px -8px rgba($black1, 0.9);
+            border: none;
+            &:hover {
+                box-shadow: 0px 10px 20px -8px $black1;
+                background-color: $black1;
+            }
+        }
+        &.white {
+            background-color: $white;
+            color: $black1;
+            box-shadow: 0px 6px 20px -8px rgba($white, 0.9);
+            &:hover {
+                box-shadow: 0px 10px 20px -8px $white;
+            }
+        }
+        &.black-border {
+            border: 1px solid $black1;
+            background-color: transparent;
+            color: $black1;
+            box-shadow: none;
+            &:hover {
+                background-color: transparent;
+                box-shadow: none;
+            }
+        }
+        &.gray-border{
+            border: 1px solid #868686;
+            background-color: transparent;
+            color: #868686;
+            box-shadow: none;
+            &:hover {
+                border: 1px solid var(--main-color-one);
+                background-color: var(--main-color-one);
+                box-shadow: none;
+                color: $white;
+            }
+        }
+        &.gray {
+            background-color: $white4;
+            color: $black1;
+            box-shadow: 0px 6px 20px -8px rgba($white4, 0.9);
+            &:hover {
+                box-shadow: 0px 10px 20px -8px $white4;
+            }
+        }
+        &.md {
+            padding: 13px 15px;
+        }
+        &.lg {
+            padding: 15px 20px;
+        }
+    }
+}
+
+/*----------------------------------
+    Read More BTN Design
+------------------------------------*/
+.read-more-wrap{
+    .read-more {
+        color: var(--main-color-one);
+        font-size: 14px;
+        line-height: 24px;
+        font-family: var(--body-font);
+        font-weight: 500;
+        position: relative;
+        &.gray {
+            color: $gray;        
+        }
+        &.uppercase {
+            text-transform: uppercase;
+        }
+        &::after {
+            position: absolute;    
+            content: "\e628";
+            font-family: 'themify';
+            font-size: 12px;
+            line-height: 24px;
+            padding-left: 5px;
+            transition: 1s;
+            display: inline-block;
+            right: -15px;
+            top: -3px;
+            @include transition($transition);
+        }
+        &:hover {
+            &::after {
+                right: -25px;
+            }
+        }
+    }
+}
+
+/*-------------------------------------
+    Play Button
+---------------------------------------*/
+.play-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+}
+.play-btn {   
+    width: 90px;
+    height: 90px;  
+    line-height: 90px;
+    background-color: $white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    color: var(--main-color-one);
+    position: relative;
+
+    &.style-02 {
+        width: 50px;
+        height: 50px;  
+        line-height: 50px;
+        background-color: var(--main-color-one);
+        color: $white;
+        font-size: 20px;
+        &::before, &::after { 
+            border: 2px solid var(--main-color-one); 
+        }
+    }
+    &.style-03 {
+        width: 80px;
+        height: 80px;  
+        line-height: 80px;
+        background-color: var(--main-color-one);
+        color: $white;
+        font-size: 30px;
+        &::before { 
+            border: 5px solid rgba($white, .5); 
+        }
+        &::after { 
+            border: 3px solid rgba($white, .5); 
+        }
+    }
+
+    &::before, &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border: 2px solid $white;
+        border-radius: 50%;
+    }
+    &::before {  
+        animation: pauseanimate 2s linear infinite;
+    }
+    &::after {
+        animation: pauseanimate 2s 1s linear infinite;
+    }
+    @keyframes pauseanimate {
+        100% {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+}
+
+
+.button-normal, .button-medium, .button-large {
+    display: flex;
+    flex-wrap: wrap;
+}
+

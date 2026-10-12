@@ -1,0 +1,203 @@
+
+/*---------------------
+    ## Breadcumb 
+----------------------*/
+.breadcrumb-area {
+    padding: 150px 0 152px 0;
+    position: relative;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    &.bg-white {
+        padding: 120px 0 75px 0;
+        &:before{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background-color: $white;
+            z-index: -1;
+        } 
+        .page-title { 
+            color: $black1;
+        }
+        p{
+            color: $black1;
+        }
+        .page-list { 
+            li {
+                color: $black1;
+                a {                   
+                    &:hover {
+                        color: $black1;
+                    }
+                }
+            }
+        }
+    }
+    &:before{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background-color: rgba($black1,.2);
+        z-index: -1;
+    }
+    &.extra{
+        padding-bottom: 138px;
+    }
+    &.style-02 {
+        padding: 0;
+        .breadcrumb-inner {
+            display: flex;
+            flex-wrap: nowrap;
+            .breadcrumb-left {
+                width: 30%;
+            }
+            .breadcrumb-right {
+                width: 70%;
+            }
+        }
+        .page-title {
+            color: $black1;
+        }
+        p {
+            color: $black1;
+        }
+        .page-list {
+            li {
+                color: $black1;
+                &:first-child {
+                    a{
+                        color: var(--main-color-one);
+                    }
+                    &:after {
+                        display: none;
+                    }
+                }
+                a {
+                    color: $black1;
+                    &:hover {
+                        color: $black1;
+                    }
+                }
+            }
+        }
+        .breadcrumb-inner-wrap {
+            display: grid;
+            place-content: center;
+            height: 100%;
+        }
+        .breadcrumb-border {
+            background-color: $white;
+            padding: 40px 80px 45px 80px;
+            transform: translateX(30%);
+            z-index: 1;
+            border-left: 2px solid $white6;
+            position: relative;
+            width: 30vw;
+            &::before {
+               top: 0;
+            }
+            &::after {
+                bottom: 0;
+            }
+            &::before, &::after {
+                position: absolute;               
+                left: 0;
+                content: '';
+                display: block;
+                width: 50%;
+                height: 2px;
+                background-color: $white6;
+            }
+        }
+        .breadcrumb-thumb {
+            background-size: cover;
+            background-position: center;
+            padding: 180px 0;
+            width: 65vw;
+        }
+        &:before{ 
+            background-color: $white;
+        }
+    }
+    &.style-03 {
+       .breadcrumb-content {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            text-align: center;
+            background-color: $white;
+            padding: 30px 40px 0 40px;
+            .page-title {
+                color: $black1;
+            } 
+            .page-list {
+                li {
+                    color: $black1;
+                    a {
+                        &:hover {
+                            color: $black1;
+                        }
+                    } 
+                }
+            }           
+       } 
+    }
+    .page-title {
+        font-size: 65px;
+        line-height: 75px;
+        font-weight: 700;
+        color: $white;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 26px;
+        max-width: 600px;
+        color: rgba($white, .70);
+        margin-bottom:  20px;
+    }
+    .page-list {
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            position: relative;
+            padding-left: 30px;
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba($white, .70);
+            &:first-child {
+                padding-left: 0;
+                a{
+                    color: var(--main-color-one);
+                }
+                &:after {
+                    display: none;
+                }
+            }
+            &:after {
+                position: absolute;
+                left: 10px;
+                top: 0;
+                content: "-";
+                font-family:'fontawesome';
+            }
+            a {
+                color: rgba($white, .70);
+                @include transition($transition);
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

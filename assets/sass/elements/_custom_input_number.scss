@@ -1,0 +1,46 @@
+.quantity {
+    position: relative;
+  }  
+  .quantity input {
+    width: 50px;
+    height: 30px;
+    line-height: 40px;
+    float: left;
+    display: block;
+    margin: 0;
+    text-align: center;
+    border: 1px solid $white6;
+    margin-left: 20px;
+    &:focus {
+        border: 1px solid $white6; 
+    }
+  }
+  
+  .quantity input:focus {
+    outline: 0;
+  }
+  .quantity-button {
+    position: relative;
+    cursor: pointer;
+    border: 1px solid $white6;
+    width: 20px;
+    text-align: center;
+    color: $black1;
+    font-size: 18px;
+    line-height: 28px;
+    transform: translateX(-100%);
+    user-select: none;
+  }
+  
+  .quantity-button.quantity-up {
+    position: absolute;
+    top: 0;
+    left: 89px;
+    border: 1px solid $white6;
+  }
+  
+  .quantity-button.quantity-down {
+    position: absolute;
+    left: 21px;
+    border: 1px solid $white6;
+  }

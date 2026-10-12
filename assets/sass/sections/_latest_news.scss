@@ -1,0 +1,209 @@
+.latest-news {
+    background-color: $white;
+    position: relative;
+    z-index: 0;
+    &.style-02 {
+        &::after {
+            bottom: 36.5%;
+        }
+        .latest-news-slider-items .cards {          
+            .cards-body{
+                margin-left: 0;
+                transform: none;
+                background-color: transparent;
+                padding: 30px 0px 32px 0;
+            }
+            .cards-img {
+                margin-right: 0;
+            }
+        } 
+        .icon {
+            padding-right: 10px;
+        }         
+        .latest-news-slider-progressbar {
+            position: relative;
+            overflow: hidden;
+            .progress-bar {
+                width: 100%;
+                height: 3px; 
+                background-color: rgba($gray, .3);  
+            }
+            .porgress-bar-active {
+                position: absolute;
+                top: 0px;
+                left: 0;
+                background-color: var(--main-color-one);
+                width: 25%;
+                height: 3px;
+            }
+        }
+    }
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 30%;
+        background-color: var(--main-color-one);
+        z-index: -1;
+    }
+    .icon {
+        padding-right: 10px;
+    }     
+    .latest-news-slider-wrap {
+        width: 100%;
+        .latest-news-slider-active {
+            display: flex;
+        }
+    }
+    .slider-arrow {    
+        display: flex;
+        position: absolute;
+        top: -10%;        
+        right: 15px;
+    
+        .slick-prev, .slick-next{
+            color: $white;
+            cursor: pointer;
+            font-size: 22px;
+            position: relative;
+            z-index: 0;
+        }
+        .slick-prev {
+            order: 1;
+            margin-right: 30px;  
+            &::before {
+                position: absolute;
+                left: -4px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1;
+                content: '';
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                border: 1px solid $white;
+                border-radius: 50%;
+                display: none;
+                @include transition($transition);
+            }       
+            &:hover {
+                &::before {
+                    display: block;
+                }
+            }
+        }
+        .slick-next {
+            order: 2;
+            &::after {
+                position: absolute;
+                right: -4px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1;
+                content: '';
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                border: 1px solid $white;
+                border-radius: 50%;
+                display: none;
+                @include transition($transition);
+            }
+            &:hover {
+                &::after {
+                    display: block;
+                }
+            }
+        }
+
+    }
+}
+
+.latest-news-slider-items {
+    .cards {    
+        .cards-img {
+            margin-right: 15px;
+            position: relative;
+            overflow: hidden;
+            @include transition($transition);
+            img {
+                width: 100%;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                background-color: rgba($black1, .3);    
+                @include transition($transition);            
+            }
+            &:hover {
+                &::before {
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .cards-body {
+            background-color: $white3;
+            margin-left: 15px;
+            margin-top: -25px;
+            position: relative;
+            z-index: 9;
+            padding: 20px 30px;
+            &:hover {
+                .name-date {
+                    .author-name {                                      
+                        color: var(--main-color-one);
+                        &::after {
+                            background-color: var(--main-color-one);
+                        }
+                    }
+                }
+                .read-more-wrap {
+                    .read-more {
+                        color: var(--main-color-one);
+                    } 
+                 }       
+            }
+            .name-date {
+                display: flex;
+                flex-wrap: nowrap;
+                .author-name {
+                    color: $gray;
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-family: var(--body-font);
+                    font-weight: 500;
+                    width: 50%;
+                    @include transition($transition);
+                }
+                .publish-date {
+                    width: 50%;
+                    color: $gray;
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-family: var(--body-font);
+                    font-weight: 400;
+                }
+            }
+            .heading-05 {
+                color: $black1;
+                font-size: 22px;
+                line-height: 32px;
+                font-family: var(--main-color-one);
+                font-weight: 600;
+            }
+        }
+    }
+
+}

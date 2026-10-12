@@ -1,0 +1,19 @@
+# Sırlar — gerçek DB şifresi ve API anahtarı barındırıyor, asla commit etme
+adminx/system/db.php
+adminx/system/api-config.php
+.env
+.env.*
+!.env.example
+
+# Loglar
+adminx/system/*.log
+*.log
+
+# Docker/OS
+.DS_Store
+Thumbs.db
+__MACOSX/
+._*
+
+# Scratch/temp
+*.tmp

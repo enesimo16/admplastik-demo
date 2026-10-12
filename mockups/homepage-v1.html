@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+<title>ADM Plastik — Ana Sayfa Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-dark: #1F4A1C;
+    --green-light: #6FA562;
+    --green-tint: #EAF3E8;
+    --off-white: #F7F8F6;
+    --near-black: #1C1D1B;
+    --text-gray: #55564F;
+    --white: #FFFFFF;
+    --shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: var(--near-black);
+    background: var(--off-white);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; display: block; }
+  .container { max-width: 1312px; margin: 0 auto; padding: 0 24px; }
+  .ph {
+    background: linear-gradient(135deg,#c7cfc6,#8f9a8c);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.7); font-size: 13px; font-weight: 500;
+    border-radius: 6px;
+  }
+
+  /* Header */
+  header.site-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 64px; background: var(--white);
+    position: sticky; top: 0; z-index: 50;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+  }
+  .logo { font-weight: 700; font-size: 20px; color: var(--green-dark); letter-spacing: 0.3px; }
+  nav.main-nav { display: flex; gap: 32px; }
+  nav.main-nav a { font-size: 15px; font-weight: 500; color: var(--near-black); transition: color .2s; }
+  nav.main-nav a:hover { color: var(--green-dark); }
+
+  /* Hero */
+  .hero {
+    background: var(--green-dark);
+    display: flex; align-items: center; gap: 64px;
+    padding: 80px 64px 130px;
+    position: relative;
+  }
+  .hero-content { max-width: 560px; display: flex; flex-direction: column; gap: 24px; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.5px; color: var(--green-light); }
+  .hero h1 { font-size: 44px; font-weight: 700; color: var(--white); line-height: 1.15; }
+  .hero p { font-size: 16px; color: #d8e5d6; line-height: 1.6; }
+  .btn-primary {
+    display: inline-block; align-self: flex-start;
+    background: var(--green-light); color: var(--green-dark);
+    padding: 14px 28px; border-radius: 4px; font-weight: 600; font-size: 15px;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.2); }
+  .hero-image { flex: 1; height: 400px; }
+
+  /* Overlap cards */
+  .overlap-cards {
+    max-width: 1312px; margin: -70px auto 0; padding: 0 24px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    position: relative; z-index: 10;
+  }
+  .overlap-card {
+    background: var(--white); border-radius: 8px; padding: 24px 28px;
+    box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .overlap-card h3 { font-size: 17px; font-weight: 600; }
+  .overlap-card p { font-size: 13px; color: var(--text-gray); line-height: 1.5; }
+  .overlap-card .link { font-size: 13px; font-weight: 600; color: var(--green-dark); }
+
+  /* Trust stats */
+  .trust-stats {
+    background: var(--white);
+    display: flex; justify-content: space-between;
+    padding: 90px 64px 48px;
+  }
+  .stat { text-align: center; }
+  .stat .num { font-size: 36px; font-weight: 700; color: var(--green-dark); }
+  .stat .label { font-size: 14px; font-weight: 500; color: var(--text-gray); margin-top: 4px; }
+
+  /* Section shared */
+  section.block { padding: 80px 64px; }
+  .section-heading { margin-bottom: 32px; }
+  .section-heading .eyebrow { display: block; margin-bottom: 8px; }
+  .section-heading h2 { font-size: 30px; font-weight: 700; }
+  .block.tinted { background: var(--green-tint); }
+  .block.white { background: var(--white); }
+
+  /* Sector cards */
+  .cards-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .sector-card {
+    background: var(--white); border-radius: 8px; padding: 24px;
+    display: flex; flex-direction: column; gap: 16px;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .sector-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .sector-card .ph { height: 180px; }
+  .sector-card h3 { font-size: 19px; font-weight: 600; }
+  .sector-card p { font-size: 14px; color: var(--text-gray); line-height: 1.5; }
+  .sector-card .link { font-size: 14px; font-weight: 600; color: var(--green-dark); }
+
+  /* Products */
+  .products-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .product-card { display: flex; flex-direction: column; gap: 12px; }
+  .product-card .ph { height: 180px; }
+  .product-card h3 { font-size: 16px; font-weight: 600; }
+  .product-card .link { font-size: 13px; font-weight: 600; color: var(--green-dark); }
+
+  /* Why section */
+  .why-section { display: flex; align-items: center; gap: 64px; }
+  .why-section .ph { flex: 1; height: 320px; }
+  .why-content { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+  .why-content h2 { font-size: 28px; font-weight: 700; }
+  .why-points { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .why-points li { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500; color: var(--text-gray); }
+  .why-points li::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--green-dark); flex-shrink: 0; }
+
+  /* Export map */
+  .export-map { background: var(--green-dark); color: var(--white); }
+  .export-map .section-heading h2 { color: var(--white); }
+  .map-area {
+    position: relative; height: 380px; border-radius: 8px;
+    background: #163a14;
+    background-image:
+      radial-gradient(circle at 22% 35%, rgba(111,165,98,0.35) 0 6px, transparent 7px),
+      radial-gradient(circle at 32% 25%, rgba(111,165,98,0.35) 0 6px, transparent 7px),
+      radial-gradient(circle at 44% 42%, rgba(111,165,98,0.35) 0 6px, transparent 7px),
+      radial-gradient(circle at 55% 28%, rgba(111,165,98,0.35) 0 6px, transparent 7px),
+      radial-gradient(circle at 66% 48%, rgba(111,165,98,0.35) 0 6px, transparent 7px),
+      radial-gradient(circle at 74% 30%, rgba(111,165,98,0.35) 0 6px, transparent 7px),
+      radial-gradient(circle at 82% 44%, rgba(111,165,98,0.35) 0 6px, transparent 7px),
+      radial-gradient(circle at 15% 60%, rgba(111,165,98,0.35) 0 6px, transparent 7px),
+      radial-gradient(circle at 50% 68%, rgba(111,165,98,0.35) 0 6px, transparent 7px);
+    display: flex; align-items: flex-start; padding: 24px;
+  }
+  .map-area span { font-size: 14px; font-weight: 500; color: #9db89a; }
+
+  /* Recent / carousel */
+  .carousel-row {
+    display: flex; gap: 24px; overflow-x: auto; padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+  }
+  .carousel-row::-webkit-scrollbar { height: 6px; }
+  .carousel-row::-webkit-scrollbar-thumb { background: #d5dbd3; border-radius: 3px; }
+  .blog-card { min-width: 380px; scroll-snap-align: start; display: flex; flex-direction: column; gap: 12px; }
+  .blog-card .ph { height: 180px; }
+  .blog-card h3 { font-size: 16px; font-weight: 600; }
+  .blog-card .link { font-size: 13px; font-weight: 600; color: var(--green-dark); }
+  .scroll-hint { font-size: 13px; color: var(--text-gray); margin-top: 16px; }
+
+  /* CTA */
+  .contact-cta {
+    background: var(--green-dark); color: var(--white);
+    text-align: center; padding: 72px 64px;
+    display: flex; flex-direction: column; align-items: center; gap: 20px;
+  }
+  .contact-cta h2 { font-size: 28px; font-weight: 700; }
+  .contact-cta p { color: #d8e5d6; font-size: 16px; }
+  .btn-white { background: var(--white); color: var(--green-dark); padding: 14px 28px; border-radius: 4px; font-weight: 600; font-size: 15px; }
+
+  /* Footer */
+  footer.site-footer { background: var(--near-black); color: #aaa; padding: 64px 64px 32px; }
+  .footer-cols { display: flex; gap: 64px; padding-bottom: 40px; }
+  .footer-col h4 { color: var(--white); font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+  .footer-col p, .footer-col a { display: block; font-size: 14px; color: #b7b7b2; line-height: 1.8; }
+  .footer-col.brand h4 { font-size: 18px; }
+  .footer-divider { border: none; border-top: 1px solid #333; margin-bottom: 20px; }
+  .copyright { font-size: 13px; color: #777; }
+
+  @media (max-width: 960px) {
+    nav.main-nav { display: none; }
+    .hero { flex-direction: column; padding: 48px 24px 110px; }
+    .overlap-cards { grid-template-columns: 1fr; margin-top: -40px; }
+    .trust-stats { flex-wrap: wrap; gap: 32px; padding: 64px 24px 48px; }
+    section.block { padding: 56px 24px; }
+    .cards-row, .products-row { grid-template-columns: 1fr 1fr; }
+    .why-section { flex-direction: column; }
+    header.site-header { padding: 16px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">ADM PLASTİK</div>
+  <nav class="main-nav">
+    <a href="#">Ana Sayfa</a>
+    <a href="#">Kurumsal</a>
+    <a href="#">Üretim</a>
+    <a href="#">Ürünler</a>
+    <a href="#">Yetkinlikler</a>
+    <a href="#">Yönetim Sistemleri</a>
+    <a href="#">İletişim</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <span class="eyebrow">1998'DEN BERİ MÜHENDİSLİK PLASTİKLERİNDE ÇÖZÜM ORTAĞINIZ</span>
+    <h1>Otomotivden raylı sistemlere, mühendislik plastikleri üretiyoruz</h1>
+    <p>AR-GE ve mühendislik gücümüzle otomotiv, iş ve tarım makinaları, raylı sistemler sektörlerine yüksek performanslı plastik parça çözümleri sunuyoruz.</p>
+    <a href="#" class="btn-primary">Ürünlerimizi Keşfedin</a>
+  </div>
+  <div class="hero-image ph">Görsel Placeholder</div>
+</section>
+
+<div class="overlap-cards">
+  <div class="overlap-card">
+    <h3>Teklif Alın</h3>
+    <p>Uzman ekibimizden hızlı teklif isteyin.</p>
+    <span class="link">Teklif Formu →</span>
+  </div>
+  <div class="overlap-card">
+    <h3>Kalite Sertifikalarımız</h3>
+    <p>ISO 9001:2015 ve diğer belgelerimiz.</p>
+    <span class="link">Sertifikaları Gör →</span>
+  </div>
+  <div class="overlap-card">
+    <h3>Ürün Kataloğu</h3>
+    <p>Tüm ürün gamımızı PDF olarak indirin.</p>
+    <span class="link">Kataloğu İndir →</span>
+  </div>
+</div>
+
+<section class="trust-stats">
+  <div class="stat"><div class="num">25+</div><div class="label">Yıllık Tecrübe</div></div>
+  <div class="stat"><div class="num">150+</div><div class="label">Uzman Çalışan</div></div>
+  <div class="stat"><div class="num">3</div><div class="label">Sektöre Hizmet</div></div>
+  <div class="stat"><div class="num">%100</div><div class="label">Yerli Üretim</div></div>
+</section>
+
+<section class="block tinted">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow" style="color:var(--green-dark)">ÇÖZÜM ALANLARIMIZ</span>
+      <h2>Sektörünüze özel plastik mühendisliği</h2>
+    </div>
+    <div class="cards-row">
+      <div class="sector-card">
+        <div class="ph">Görsel</div>
+        <h3>Otomotiv</h3>
+        <p>Otomotiv sanayi için yüksek dayanıklılıkta plastik parça üretimi.</p>
+        <span class="link">Detaylı Bilgi →</span>
+      </div>
+      <div class="sector-card">
+        <div class="ph">Görsel</div>
+        <h3>İş ve Tarım Makinaları</h3>
+        <p>Ağır hizmet tipi makina ekipmanları için mühendislik çözümleri.</p>
+        <span class="link">Detaylı Bilgi →</span>
+      </div>
+      <div class="sector-card">
+        <div class="ph">Görsel</div>
+        <h3>Raylı Sistemler</h3>
+        <p>Raylı sistem üreticilerine özel sertifikalı plastik bileşenler.</p>
+        <span class="link">Detaylı Bilgi →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block white">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow" style="color:var(--green-light)">ÜRÜNLERİMİZ</span>
+      <h2>Öne çıkan ürünler</h2>
+    </div>
+    <div class="products-row">
+      <div class="product-card"><div class="ph">Görsel</div><h3>Ürün Adı 1</h3><span class="link">İncele →</span></div>
+      <div class="product-card"><div class="ph">Görsel</div><h3>Ürün Adı 2</h3><span class="link">İncele →</span></div>
+      <div class="product-card"><div class="ph">Görsel</div><h3>Ürün Adı 3</h3><span class="link">İncele →</span></div>
+      <div class="product-card"><div class="ph">Görsel</div><h3>Ürün Adı 4</h3><span class="link">İncele →</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="block tinted why-section">
+  <div class="ph">Görsel Placeholder</div>
+  <div class="why-content">
+    <span class="eyebrow" style="color:var(--green-dark)">NEDEN ADM PLASTİK</span>
+    <h2>Kalite ve mühendislikte fark yaratıyoruz</h2>
+    <ul class="why-points">
+      <li>ISO 9001:2015 Kalite Yönetim Sistemi</li>
+      <li>Kendi bünyesinde AR-GE ve mühendislik ekibi</li>
+      <li>Sektöre özel test ve laboratuvar imkanları</li>
+      <li>Sosyal uygunluk ve çevre politikaları</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block export-map">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">GLOBAL VARLIĞIMIZ</span>
+      <h2>40+ ülkeye ihracat yapıyoruz</h2>
+    </div>
+    <div class="map-area">
+      <span>[ Dünya Haritası — İhracat Yapılan Ülkeler İşaretli ]</span>
+    </div>
+  </div>
+</section>
+
+<section class="block white">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow" style="color:var(--green-light)">GÜNCEL</span>
+      <h2>Son projeler ve haberler</h2>
+    </div>
+    <div class="carousel-row">
+      <div class="blog-card"><div class="ph">Görsel</div><h3>Haber Başlığı 1</h3><span class="link">Devamını Oku →</span></div>
+      <div class="blog-card"><div class="ph">Görsel</div><h3>Haber Başlığı 2</h3><span class="link">Devamını Oku →</span></div>
+      <div class="blog-card"><div class="ph">Görsel</div><h3>Haber Başlığı 3</h3><span class="link">Devamını Oku →</span></div>
+      <div class="blog-card"><div class="ph">Görsel</div><h3>Haber Başlığı 4</h3><span class="link">Devamını Oku →</span></div>
+    </div>
+    <div class="scroll-hint">← Kartları kaydırmak için sürükleyin →</div>
+  </div>
+</section>
+
+<section class="contact-cta">
+  <h2>Projeniz için birlikte çalışalım</h2>
+  <p>Uzman ekibimizden teklif alın, ihtiyacınıza özel çözüm sunalım.</p>
+  <a href="#" class="btn-white">Teklif Al</a>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-cols">
+    <div class="footer-col brand">
+      <h4>ADM PLASTİK</h4>
+      <p>Ovaakça Santral Mh. Istanbul Cd. No:646/C<br>Osmangazi / Bursa</p>
+    </div>
+    <div class="footer-col">
+      <h4>Menü</h4>
+      <a href="#">Hakkımızda</a>
+      <a href="#">Ürünler</a>
+      <a href="#">Kalite Politikası</a>
+      <a href="#">Sertifikalar</a>
+      <a href="#">İletişim</a>
+    </div>
+    <div class="footer-col">
+      <h4>İletişim</h4>
+      <a href="tel:02243623975">0224 362 39 75</a>
+      <a href="mailto:info@admplastik.com.tr">info@admplastik.com.tr</a>
+    </div>
+  </div>
+  <hr class="footer-divider">
+  <div class="copyright">© ADM Plastik. Tüm hakları saklıdır.</div>
+</footer>
+
+</body>
+</html>

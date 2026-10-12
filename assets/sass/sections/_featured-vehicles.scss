@@ -1,0 +1,183 @@
+.featured-vehicles-section { 
+    position: relative;
+    .slick-next {
+        order: 2;        
+        right: 0;
+        background-image: linear-gradient(90deg, rgba($white,0.1) 0%, rgba($white,1) 100%);
+        position: relative;
+        &::after {
+            right: 33%;
+        }
+        &:hover {
+            &::after {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+    .slick-prev {
+        background-image: linear-gradient(90deg, rgba($white,0.9) 10%, rgba($white,0.1) 100%);
+        position: relative;
+        &::before {
+            left: 33%;
+        }
+        &:hover {
+            &::before {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+    .slick-next::after, .slick-prev::before {        
+        position: absolute;
+        content:  '';
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        border: 1px solid var(--main-color-one);
+        border-radius: 50%;
+        visibility: hidden;
+        opacity: 0;
+        @include transition($transition);
+    } 
+    .slick-prev, .slick-next  {
+        font-size: 24px;       
+        position: absolute;
+        top: 50%;        
+        transform: translateY(-50%);        
+        z-index: 9;        
+        height: 100%;   
+        width: 100px;     
+        display: flex;        
+        align-items: center;        
+        justify-content: center;
+        cursor: pointer;
+    }    
+    .vehicle-slider-active {
+        display: flex;  
+        .slick-slide.slick-current.slick-active.slick-center {
+            .h2-vehicle-slider-items { 
+                &::after {
+                    height: 140%;
+                    top: -20%;
+                    bottom: -20%;
+                    background-color: $black1;
+                }
+                .items-head {
+                    transform: translateY(-28%);
+                }
+                .main-btn-wrap {
+                    visibility:  visible;
+                    opacity: 1;
+                    // transform: translateY(60%);
+                }
+                .items-body {
+                    transform: translateY(-40%);
+                    .heading-05 { 
+                        color: $white;
+                    } 
+                    .list-items-wrap {
+                        list-style: none;
+                        .list-items {
+                            color: #ffffff; 
+                            opacity: 0.7;                             
+                        }
+                    }              
+                }
+            }
+        }
+    }
+}
+
+.h2-vehicle-slider-items {    
+    background-color: $white7; 
+    position: relative;  
+    text-align: center;
+    margin: 60px 0;
+    @include transition($transition); 
+    z-index: 0;
+    padding: 20px 20px 0 20px;
+
+    &::after  {
+        position: absolute;
+        content: '';  
+        top: 0;
+        left: 15%;           
+        height: 100%;
+        width: 70%;        
+        z-index: -1;
+        @include transition($transition);
+    }
+    &:hover {
+        &::after {
+            height: 140%;
+            top: -20%;
+            bottom: -20%;
+            background-color: $black1;
+        }
+        .items-head {
+            transform: translateY(-28%);
+        }
+        .main-btn-wrap {
+            visibility:  visible;
+            opacity: 1;
+        }
+        .items-body {
+            transform: translateY(-40%);
+            .heading-05 { 
+                color: $white;
+            } 
+            .list-items-wrap {
+                list-style: none;
+                .list-items {
+                    color: #ffffff;    
+                    opacity: 0.7;                   
+                }
+            }              
+        }
+    }
+    .items-head {
+        @include transition($transition);
+        // img {
+        //     width: 100%;
+        // }
+    }
+    .items-body {
+        padding: 0 60px;
+        @include transition($transition);
+        .heading-05 {
+            color: $black1;
+            font-size: 22px;
+            line-height: 32px;
+            font-family: var(--body-font);
+            font-weight: 600;
+        }
+        .list-items-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+
+            .list-items {
+                color: $gray2;
+                font-size: 14px;
+                line-height: 24px;
+                font-family: var(--body-font);
+                font-weight: 400;
+                padding-left: 5px;
+                list-style: none;
+                .title {
+                    font-weight: 300;
+                    padding-left: 2px;
+                }
+            }
+        }
+    }
+    .main-btn-wrap {
+        visibility: hidden;
+        opacity: 0;
+        @include transition($transition);
+    }
+}
+      

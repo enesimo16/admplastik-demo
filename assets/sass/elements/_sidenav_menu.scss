@@ -1,0 +1,108 @@
+.closebtn {
+    color: var(--main-color-one);
+    font-size: 40px;
+    width: 50px;
+    text-align: center;
+    height: 50px;
+    cursor: pointer;
+}
+.sidebar-class {
+    &.right {
+        width: 400px;
+        text-align: left;
+        right: 0;
+        left: inherit;
+        transform-origin: right;
+        padding: 0 20px;
+        transform: perspective(1200px) rotateY(-90deg);
+        display: grid;       
+        &::after { 
+            right: 0;
+            left: inherit;
+        }
+        .toggle-btn {
+            text-align: right;
+        }
+    }
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100vh;
+    background-color: $black1;
+    text-align: center;
+    transform-origin: left;
+    transform: perspective(1200px) rotateY(90deg);
+    transition: all 400ms ease;
+    // padding-top: 60px; 
+    z-index: 9999; 
+    &::after {
+        content: "";
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba($black1, .3);
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: -1;     
+    }
+    &.active {
+        transform: perspective(1200px);
+    }
+    .sider-social-icon-wrap {
+        position: inherit !important;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        li {
+            font-size: 16px;
+            line-height: 55px;
+            font-family: var(--menu-font);
+            font-weight: 400;
+            color: $white;
+            list-style: none;
+            color: $white;
+            width: 100%;
+            display: inline-block;
+        }
+    }
+    .banner__header__follow_us {
+        display: flex;
+        justify-content: space-between;     
+ 
+    }   
+}
+.sidebar-logo-area {
+    .logo-area {
+        margin: auto;
+    }
+    p {
+        text-align: left;
+        padding-top: 20px;
+        color: $white;
+        font-size: 14px;
+        line-height: 24px;
+        font-family: var(--body-font);
+        font-weight: 300;
+        margin-bottom: 0;
+
+    }
+}
+.sidebar-working-area, .sidebar-contact-area {
+    .date {
+        color: $white;
+        font-size: 14px;
+        line-height: 24px;
+        font-family: var(--body-font);
+        font-weight: 300;
+    }
+    .time {
+        color: $white;
+        font-size: 14px;
+        line-height: 24px;
+        font-family: var(--body-font);
+        font-weight: 400;            
+    }
+}

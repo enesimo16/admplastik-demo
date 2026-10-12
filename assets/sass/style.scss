@@ -1,0 +1,173 @@
+/*
+Theme Name: Coche
+Theme URI: 
+Author: 
+Author URI: 
+Description: Coche - Car servicing HTML Template
+Version: 1.0.0
+*/
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+# Typography
+# Normalize
+# Accessibility
+# Globals
+# Alignments
+# Clearings
+# Posts and pages
+# Captions
+# Galleries
+# Unit test
+# guterberg
+# Gutenberg	Default Style
+# Block Color Palette Colors
+# Sections
+    ## Breadcrumb
+    ## Comments
+    ## Widgets
+    ## Nav Bar
+    ## Top Bar
+    ## Header
+    ## Slider
+    ## How We Are
+    ## Our Process
+    ## Our Service
+    ## Banner Auto Car
+    ## Pricing Table
+    ## Latest News
+    ## Tab Section
+    ## Featured Vehicle
+    ## Service Section
+    ## Car Booking
+    ## Car Adds
+    ## Our Team
+    ## Banner Bottom
+    ## Popular Car
+    ## Service
+    ## Filter
+    ## New Facilities
+    ## Testimonial
+    ## Awesome Blog
+    ## About Us
+    ## Blog
+    ## Blog Details
+    ## Shop Page
+    ## Step Car Sell
+    ## Car Booking Page
+    ## Error 404
+
+
+# Elements
+    ## Back Top
+    ## Preloader
+    ## Search Popup
+    ## Button
+    ## Section Title
+    ## Counterup Item
+    ## Testimonial
+    ## Custom Select
+    ## Custom Calender
+    ## Scroll Down
+    ## Sidenav Menu
+    ## Star Rating
+    ## Price Filter
+    ## Shop Details
+    ## Contact
+    ## Sign In
+    ## Sticky Icon
+    ## Modal
+    ## Menu Cart
+    ## Custom File Upload
+    ## Accordion
+    ## Countdown
+    ## Coming Soon
+    ## Shopping Cart
+    ## Custom Input Number
+    ## Typography
+    ## Icons
+    ## Pagination
+    ## Alert
+
+    --------------------------------------------------------------*/
+
+//== Global Design
+@import "global/_mixins";
+@import "global/_variables";
+@import "global/_global";
+@import "global/_gutenberg";
+//== Pages
+
+//== Sections
+@import "sections/_breadcrumb";
+@import "sections/_comments";
+@import "sections/_widgets";
+@import "sections/_navbar";
+@import "sections/_header";
+
+@import "sections/_slider";
+@import "sections/_how_weare";
+@import "sections/_our_process";
+@import "sections/_our_service";
+@import "sections/_banner_auto_car";
+@import "sections/_pricing_plan";
+@import "sections/_latest_news";
+@import "sections/_tabs_section";
+@import "sections/_featured-vehicles";
+@import "sections/_h2_service_section";
+@import "sections/_h2_car_booking";
+@import "sections/_h2_car_adds";
+@import "sections/_h2_our_team";
+@import "sections/_h5_banner_bottom";
+@import "sections/_h5_popular_car";
+@import "sections/_h5_service";
+@import "sections/_h5_filter";
+@import "sections/_h5_new_facilities";
+@import "sections/_h5_testimonial";
+@import "sections/_h5_awesome_blog";
+@import "sections/_about_us";
+@import "sections/_service";
+@import "sections/_blog";
+@import "sections/_blog_details";
+@import "sections/_shop_page";
+@import "sections/_step_car_sell";
+@import "sections/_car_booking_page";
+@import "sections/_error_404";
+@import "sections/_footer";
+
+//== Elements
+@import "elements/_back_top";
+@import "elements/_preloader";
+@import "elements/_button";
+@import "elements/_section_title";
+@import "elements/_counter_up";
+@import "elements/_testimonial";
+@import "elements/_custom-select";
+@import "elements/_search_popup";
+@import "elements/_custom_calender";
+@import "elements/_scroll_down";
+@import "elements/_sidenav_menu";
+@import "elements/_rating";
+@import "elements/_price_filter";
+@import "elements/_shop_details";
+@import "elements/_contact";
+@import "elements/_sign_in";
+@import "elements/_sticky_icon";
+@import "elements/_modal";
+@import "elements/_menu_cart";
+@import "elements/_custom_file_upload";
+@import "elements/_accordion";
+@import "elements/_countdown";
+@import "elements/_coming-soon";
+@import "elements/_shopping_cart";
+@import "elements/_custom_input_number";
+@import "elements/_typography";
+@import "elements/_icons";
+@import "elements/_pagination";
+@import "elements/_alert";
+
+
+

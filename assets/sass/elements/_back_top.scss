@@ -1,0 +1,56 @@
+
+/*---------------------------------------
+    ## Back Top
+---------------------------------------*/
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 50px;
+    z-index: 9;
+    cursor: pointer;
+    display: none;  
+    
+    &::before {
+        content: "";
+        display: block;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        border: 1px solid $white;
+        border-radius: 50%;
+        z-index: -1;
+        position: absolute;
+        top: 25%;
+        left: -10%;   
+        animation: pauseanimate 2s linear infinite;    
+    }
+    &::after {
+        content: '';
+        display: block;
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        border: 1px solid $white;
+        border-radius: 50%;
+        position: absolute;
+        z-index: -1;
+        top: 18%;
+        left: -25%;  
+        animation: pauseanimate 2s 1s linear infinite;    
+    }
+    .back-top {
+        &::before {
+            content: "\f114";
+            font-family: "Flaticon";
+            display: block;   
+            color: $white;
+            position: absolute;
+            top: -31px;
+            left: 50%;
+            transform: translateX(-50%);    
+  
+        }
+    }
+}

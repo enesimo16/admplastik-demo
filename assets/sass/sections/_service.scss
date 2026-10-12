@@ -1,0 +1,188 @@
+.service-single-item {
+    .thumb-wrap {
+        overflow: hidden;
+        max-width: 500px;
+    }
+    .thumb {
+        width: 100%;        
+        position: relative;        
+        transition: all 0.8s;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            background-color:  rgba($maincolor, 0.1);
+            transition: all 0.8s;
+            display: block;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            z-index: 1;
+            background-color: rgba($maincolor, 0.1);
+            transition: all 0.8s;
+            display: block;
+        }
+        &:hover {
+            transform: scale(1.1) rotate(-2deg);
+            &::before, &::after {
+                width: 100%;
+                height: 100%
+            }
+        }
+    }
+    .service-content {
+        .item-number {
+            color: rgba($maincolor, .15);
+            font-size: 140px;
+            line-height: 150px;
+            font-family: var(--body-font);
+            font-family: var(--slider-heading-bold-font);
+            text-align: right;
+        }
+        .title {
+            color: $black1;
+            font-size: 34px;
+            line-height: 44px;
+            font-family: var(--body-font);
+            font-weight: 600;            
+            padding: 10px 0 10px 25px;
+            position: absolute;
+            top: 20%;
+            left: -20%;  
+            z-index: 0;
+            &::after {
+                content: '';
+                background-color: $white;
+                display: block;
+                width: 100px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+        }
+        p{
+            font-size: 14px;
+            line-height: 24px;
+            font-family: var(--body-font);
+            font-weight: 400;
+        }
+        .more-details {
+            // padding-left: 60px;
+            color: $black1;
+            font-size: 14px;
+            line-height: 24px;
+            font-family: var(--body-font);
+            font-weight: 500;
+            position: relative;
+            @include transition($transition);
+            &:hover {
+                padding-left: 60px;
+                color: var(--main-color-one);
+                &::before {
+                    background-color: var(--main-color-one);
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 1px;
+                background-color: $black1;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                visibility: hidden;
+                opacity: 0;
+                @include transition(all .5s);
+            }
+        }
+    }
+}
+
+
+/*-----------------------------
+        Service Details
+------------------------------*/
+
+.process-section {
+    position: relative;
+    .section-title {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+    }
+    .content-area {
+        &.white {
+            .number {
+                color: $white;
+            }
+            .title {
+                color: $white;
+            }
+            p {
+                color: $white;
+            }
+        }
+        .number {
+            color: $white2;
+            font-size: 30px;
+            line-height: 42px;
+            font-family: var(--body-font);
+            font-weight: 500;
+            padding-left: 20px;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                content: '';
+                display: block;
+                width: 15px;
+                height: 1px;
+                background-color: $white2;
+            }
+        }
+        .title {
+            color: $black1;
+            font-size: 28px;
+            line-height: 40px;
+            font-family: var(--body-font);
+            font-weight: 500;
+        }
+        p {
+            color: $black3;
+            font-size: 14px;
+            line-height: 24px;
+            font-family: var(--body-font);
+            font-weight: 400;
+        }
+    }
+    &__right {
+        position: relative;
+        .absolute {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .content-area {
+            padding: 90px 110px;
+        }
+    }
+   
+}

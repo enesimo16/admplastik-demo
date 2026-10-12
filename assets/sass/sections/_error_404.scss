@@ -1,0 +1,28 @@
+/*-----------------------
+    Error 404 Page
+-----------------------*/
+.banner__body {
+    &__404__content {
+        text-align: center;
+        text-align: center;
+        display: grid;
+        align-content: center;
+        height: 100vh;
+        min-height: 600px;
+        p {
+            color: $white;
+            font-size: 14px;
+            line-height: 24px;
+            font-family: var(--body-font);
+            font-weight: 400;
+            padding-top: 160px;
+        }
+        .title-404{
+            color: $white;
+            font-size: 16vw;
+            line-height: 120px;
+            font-weight: 800;
+            letter-spacing: 10px;
+        }
+    }
+}

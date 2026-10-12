@@ -1,0 +1,37 @@
+/*---------------------------
+        Counter Item 
+-----------------------------*/
+.counterup-section {
+    width: 60%;
+    margin: auto;
+}
+
+.single-couterup {  
+    text-align: center;
+    .content {
+        .count-wrap{
+            color: $black1;
+            display: flex;
+            align-items: center;
+            font-size: 55px;
+            font-family: var(--body-font);
+            line-height: 65px;
+            font-weight: 700;
+            padding: 15px 0;
+            justify-content: center;
+            .plus {
+                width: 50px;
+            }
+        }    
+
+        .title {
+            color: var(--main-color-one);
+            font-size: 16px;
+            font-family: var(--body-font);
+            line-height: 22px;
+            font-weight: 500;
+            
+        }
+    }
+}
+

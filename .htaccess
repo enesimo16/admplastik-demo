@@ -1,0 +1,56 @@
+# Block access to hidden/system/backup files site-wide
+# .md ve .sql da dahil: geliştirme dokümanları yanlışlıkla yüklenirse
+# dışarıdan okunamasın (API anahtarı, kurulum notları vb. içerirler).
+<FilesMatch "(^\.|\.(log|sql|bak|zip|env|md|example)$)">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Geliştirme klasörleri — canlıya yüklenmemeli, yüklenirse de erişilemesin
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule ^(docs|mockups)/ - [F,L]
+</IfModule>
+
+Options +FollowSymLinks
+RewriteEngine on
+
+# Temel production güvenlik başlıkları. CSP mevcut üçüncü taraf CDN'leri
+# bozabileceği için burada özellikle zorlanmıyor; CDN listesi netleşince eklenebilir.
+<IfModule mod_headers.c>
+    Header unset X-Powered-By
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# Canlı hostlarda HTTPS'e zorla; yerel Docker geliştirmesini etkileme.
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:.*)?$ [NC]
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+ErrorDocument 404 /404.php
+RewriteRule ^robots\.txt$ robots.php [L]
+
+# adminx/ gerçek bir dizin — Apache'nin kendi DirectoryIndex'iyle adminx/index.php'ye
+# düşmesi gerekiyor. RewriteCond'lar sadece hemen altındaki kurala uygulandığından
+# (aşağıdaki genel yakalama kuralına DEĞİL), bunu burada ayrıca dışlıyoruz.
+RewriteCond %{REQUEST_URI} ^/adminx/?$
+RewriteRule ^ - [L]
+
+RewriteRule ^sitemap.xml sitemap.php [L]
+RewriteRule ^adminx/dashboard adminx/index.php [L]
+RewriteRule ^adminx/([0-9a-zA-Z-_]+)$  adminx/index.php?page=$1 [L,QSA]
+
+# Gerçek dosya/dizinlere (assets/, uploads/, adminx/system/... vb.) dokunma —
+# sadece hiçbirine denk gelmeyen "sayfa" istekleri directs.php'ye gitsin.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(css|js|images|inc|lang)
+RewriteRule ^([0-9a-zA-Z-_/]+)$ directs.php?seo_url=$1 [L,QSA]

@@ -1,0 +1,128 @@
+/*------------------------
+        Typhography 
+--------------------------*/
+.typography {
+    color: $black1;
+   &_primary {
+       display: flex;
+       ul {
+           padding-left: 0;
+           margin: 0;
+           list-style-type: none;
+       }
+       .heading-06 {
+           padding-bottom: 20px;
+           margin-bottom: 0;
+           font-size: 14px;
+           line-height: 24px;
+           font-weight: 600;
+       }
+       .heading-05 {
+           font-size: 20px;
+           line-height: 30px;
+           font-weight: 700;
+           border-bottom: 1px solid $white2;
+           padding-bottom: 5px;
+       }
+       .heading-02 {
+           font-size: 50px;
+           line-height: 60px;
+           font-weight: 700;
+           background-color: $white3;
+           border-radius: 4px;
+           padding: 30px;
+           margin-bottom: 0;
+       }
+       p {
+           color: $black1;
+           font-size: 14px;
+           font-weight: 500;
+       }
+       .light {
+            font-weight: 300;
+       }
+       .regular {
+            font-weight: 400;
+       }
+       .mediam {
+            font-weight: 500;
+       }
+       .s-bold {
+          font-weight: 600;
+       }
+       .bold {
+        font-weight: 700;
+       }
+    &__left { 
+        width: 190px;
+     }
+    &__middle {
+        padding: 20px 30px 0;
+    }
+    &__right {
+        width: 100px;
+    }
+   }
+}
+/*------------------------
+        Heading
+--------------------------*/
+.heading {
+    .title {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+    .heading-01 {
+        font-size: 65px;
+        line-height: 75px;
+        font-weight: 700;
+        padding: 5px 0 12px  0;
+    }
+    .heading-02 {
+        font-size: 50px;
+        line-height: 60px;
+        font-weight: 700;
+        padding: 6px 0 14px  0;
+    }
+    .heading-03 {
+        font-size: 40px;
+        line-height: 50px;
+        font-weight: 600;
+        padding: 7px 0 16px  0;
+    }
+    .heading-04 {
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 600;
+        padding: 8px 0 17px  0;
+    }
+    .heading-05 {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 500;
+        padding: 10px 0 20px  0;
+    }
+    .heading-06 {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        padding: 10px 0 0  0;
+    }
+}
+
+/*------------------------
+        Inline
+--------------------------*/
+.inline-element {
+    p {
+        color: $gray;
+        font-size: 14px;
+        line-height: 24px;
+        mark {
+            background-color: var(--main-color-one);
+            border-radius: 4px;
+            color: $black1;
+        }
+    }
+}

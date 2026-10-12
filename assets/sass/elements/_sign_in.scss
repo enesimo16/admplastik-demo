@@ -1,0 +1,206 @@
+.sign {
+    &-register-area {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: 0;
+        position: relative;
+        padding: 100px 0;
+        &-inner {
+            max-width: 300px;
+            text-align: center;
+            margin: auto;
+            display: grid;
+            align-items: center;
+            position: relative;
+            color: $white;            
+            padding: 50px 40px;
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                background-color: rgba( $black1, .4);
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+            .title {                
+                font-size: 32px;
+                line-height: 42px;
+                font-family: var(--body-font);
+                font-weight: 600;
+            }
+            p{
+                font-size: 14px;
+                line-height: 24px;
+                font-family: var(--body-font);
+                font-weight: 400;
+                padding: 10px 0;
+            }
+        }
+    }
+    &-in-area {
+        .btn-login-with {
+            color: $white;
+            font-size: 12px;
+            line-height: 24px;
+            font-family: var(--body-font);
+            font-weight: 400;
+            display: inline-block;
+            width: 48%;
+           &.google {
+            background-color: $google-plus;
+            margin-right: 3%;
+           }
+           &.facebook {
+            background-color: $facebook;         
+           }
+            .icon {
+                border-right: 1px solid $white;        
+                padding: 16px 16px;
+                display: inline-block;
+                font-size: 12px;
+            }
+            .text {
+                padding: 10px;
+                display: inline-block
+            }
+        }
+        .hr-border {
+            position: relative;
+            text-align: center;
+            color: $gray2;
+            font-size: 10px;
+            line-height: 24px;
+            font-family: var(--menu-font);
+            font-weight: 400;
+            margin-top: 40px;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 48%;
+                transform: translateY(-50%);
+                height: 1px;
+                background-color: rgba($gray, .3);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: 48%;
+                transform: translateY(-50%);
+                height: 1px;
+                background-color: rgba($gray, .3);
+            }
+        }
+
+        label {
+            color: $black1;
+            font-size: 14px;
+            line-height: 24px;
+            font-family: var(--body-font);
+            font-weight: 400;
+            padding-bottom: 5px;
+        }
+        .form-control {
+            border: none;
+            background-color: $white3;
+            border-left: 1px solid $gray;
+            &::placeholder {
+                color: $gray;
+                font-size: 14px;
+                line-height: 24px;
+                font-family: var(--body-font);
+                font-weight: 400;
+            }
+        }
+        .input-group-text {
+            background-color: $white3;
+            border: none;
+            .icon, .show-hide-icon {
+                color: $gray;
+            }
+        }
+        &-switch {
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            height: 15px;
+            margin-right: 10px;
+            input { 
+                opacity: 0;
+                width: 0;
+                height: 0;
+              }
+              .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                -webkit-transition: .4s;
+                transition: .4s;
+              }              
+              .slider:before {
+                position: absolute;
+                content: "";
+                height: 10px;
+                width: 10px;
+                left: 2px;
+                bottom: 3px;
+                background-color: $white;
+                transition: .4s;
+              }
+              
+              input:checked + .slider {
+                background-color: #35CE9F;
+              }
+              
+              input:focus + .slider {
+                box-shadow: 0 0 1px #35CE9F;
+              }
+              
+              input:checked + .slider:before {
+                transform: translateX(15px);
+              }
+              
+              /* Rounded sliders */
+              .slider.round {
+                border-radius: 34px;
+              }          
+              .slider.round:before {
+                border-radius: 50%;
+              }
+          }          
+          
+
+          .form-bottom-area {
+              display: flex;
+              .remember-me, .forgot-password{
+                  width: 50%;
+              }
+              .remember-me {
+                  display: flex;
+                  align-items: center;
+                  color: $gray;
+                  font-size: 14px;
+                  line-height: 24px;
+                  font-family: var(--body-font);
+                  font-weight: 400;
+              }
+              .forgot-password {
+                  text-align: right;
+                  color: $gray;
+                  font-size: 14px;
+                  line-height: 24px;
+                  font-family: var(--body-font);
+                  font-weight: 400;
+              }
+          }
+    }
+}

@@ -1,0 +1,24 @@
+.new-facilities {
+    .left-column {
+        .thumb-small {
+            position: absolute;
+            top: 60%;
+            left: 60%;
+            width: 100%;
+        }
+    }
+    .right-column {
+        float: right;
+        height: 100%;
+        display: grid;
+        place-content: center;
+
+        .paragraph  {
+            color: $black3;
+            font-size: 14px;
+            line-height: 30px;
+            font-family: var(--body-font);
+            font-weight: 400;
+        }
+    }
+}

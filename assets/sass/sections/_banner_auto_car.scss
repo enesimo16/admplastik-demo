@@ -1,0 +1,52 @@
+.banner-auto-car {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    &.style-02 {
+        .banner-right-content {
+            p, .info-area .info-area-right .service-time {
+                color: $gray;
+                font-size: 14px;
+                line-height: 24px;
+                font-family: var(--body-font);
+                font-weight: 400;
+            }
+        } 
+    }
+    .banner-right-content {
+        display: grid;
+        align-content: center;
+        height: 100%;
+        .heading-05 {
+            color: $black1;
+            font-size: 20px;
+            line-height: 30px;
+            font-family: var(--body-font);
+            font-weight: 600;
+        }
+        .info-area {
+            display: table;
+            .info-area-left {
+                width: 210px;
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .info-area-right {             
+                .service-time {
+                    color: var(--main-color-one);
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-family: var(--body-font);
+                    font-weight: 500;
+                }
+                .contact-number {
+                    color: $black1;
+                    font-size: 22px;
+                    line-height: 32px;
+                    font-family: var(--body-font);
+                    font-weight: 600;                    
+                }
+            }
+        }
+    }
+}

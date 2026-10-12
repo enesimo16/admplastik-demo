@@ -1,0 +1,94 @@
+.home-02_tab-section {
+    .tab-wrapper {
+        width: 50%;
+        margin: auto;
+
+        .nav-tabs {
+            justify-content: center;
+            border: none;
+            margin-top: -40px;
+            margin-bottom: 1px;
+            z-index: 9;
+            position: relative;
+            .nav-item {
+                text-align: center; 
+                background-color: $white; 
+                border-bottom: 1px solid rgba($black2, .2);
+                &:first-child {
+                    border-radius: 4px 0 0 0;
+                    overflow: hidden;
+                } 
+                &:last-child {
+                    border-radius: 0 4px 0 0;
+                    overflow: hidden;
+                }         
+            }
+            .nav-link {
+                border: none;
+                padding: 8px 0;
+                min-width: 140px;
+                border-radius: 0;
+                color: $black1;
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 400;
+                &.active {
+                    background-color: var(--main-color-one);
+                    color: $white;
+                }
+            }
+        }
+
+        .select-box-wrap {
+            display: flex;
+            box-shadow: 0 11px 18px rgba($gray, .2);
+            .items {
+                width: 33.33%;
+                &:not(:last-child){
+                    border-right:  1px solid rgba($black2, .2);
+                }
+                .main-btn-wrap{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                } 
+            }
+            .custom-select-box {
+                min-height: 90px;
+                display: flex;
+                align-items: center;
+                .nice-select {
+                    border-radius: none;
+                    border: none;
+                    width: 100%;
+                    font-size: 14px;
+                    line-height: 26px;
+                    color: $gray;
+                    font-weight: 300;
+                    display: flex;
+                    align-items: center;
+                    &::after {
+                        width: 8px;
+                        height: 8px;
+                    }
+                    .list {
+                        width: 100%;
+                        margin-top: 1px;
+                    }
+                    .option {
+                        &.selected {
+                            color: $black1;
+                            font-size: 20px;
+                            font-family: var(--body-font);
+                            font-weight: 600;
+                            line-height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

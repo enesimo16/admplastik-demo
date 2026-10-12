@@ -1,0 +1,125 @@
+/*--------------------------------------------------------------
+	## Header
+--------------------------------------------------------------*/
+header {
+    position: absolute;    
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    border-bottom: 1px solid rgba($white, .2);
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    &.position-inherit {
+        position: inherit;
+    }
+    &.border-none {
+        border-bottom: none;
+    }
+    &.border-none {
+        .topbar-area .container::before,
+        .topbar-area .container::after{
+             background-color: transparent;
+         }
+    } 
+    &.style-04 {
+        .h4-header-inner {
+            display: flex;
+            justify-content: space-between;  
+            width: 100%;   
+            padding-top: 45px;   
+            height: 100px; 
+            align-items: center;
+        }
+        .humberger-menu-area {
+            width: 20%;    
+        }
+        .logo-area-wrap {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+        }
+        .nav-right-content {
+            width: 20%;
+            ul {
+                justify-content: flex-end;
+            }
+        }
+    }
+    .container{
+        .row {
+            align-items: center;         
+        }
+    }
+    /*--------Top Bar Area--------*/
+    .topbar-area {
+        background-color: rgba($black1, 0.70);
+
+        &.style-02 {
+            background-color: rgba($black1, 1); 
+        }
+        .container {
+            position: relative;
+            &::before, &::after {
+                position: absolute;
+                top: 40px;
+                z-index: 1;
+                content: "";
+                width: 1px;
+                min-height: calc(100vh - 40px);
+                background-color: rgba($white, .2);
+            }
+            &::before {
+                left: 0;
+            }
+            &::after {
+                right: 0;
+            }
+        }
+    }
+    .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;  
+        width: 100%;      
+    }
+    .header-bottom-area {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        height: 70px;
+    }
+    /*-----------Left Content-------------*/
+    .left-content {
+        color: $white;
+        font-size: 14px;
+        line-height: 25px;
+        font-weight: 400;
+        font-family: var(--menu-font);
+    }
+
+    /*----------Right Content-----------*/
+    .right-content {
+        display: flex;
+        align-items: center;
+    }
+
+   /*---logo area---*/
+    .logo-area {
+        min-width: 160px;         
+        display: flex; 
+        align-items: center;    
+    }
+    /*---navbar area---*/
+    .navbar-area {
+        width: 90%;        
+    }
+    .navbar-toggler {
+        height: 70px;
+    }
+
+  
+}

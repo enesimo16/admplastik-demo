@@ -1,0 +1,80 @@
+.h2-service-section {   
+    .items-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 5px;
+        margin: 0;
+    }
+}
+.home-02-our-service-items {
+    list-style: none;
+    width: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 20px;
+    .border-bg {
+        background-image: linear-gradient(180deg, #FF9444 0%, #2d6a28 100%);
+    }
+    .item-left {
+        width: 70px;
+        .item-border {
+            border: 1px solid $white6;
+            width: 60px;
+            height: 65px;
+            position: relative;
+            z-index: 0;
+            .border-bg {
+                position: absolute;
+                z-index: -1;
+                left: -1px;
+                right: -1px;
+                bottom: -1px;
+                top: 60%;
+                transition: all 0.8s;
+                transition: all 1s;
+            }
+            .icon {
+                width: 105%;
+                height: 90%;                
+                background-color: $black1;               
+                color: $white;                
+                margin: 5% 0 0 -10%;                
+                display: flex;                
+                justify-content: center;                
+                align-items: center;                
+                font-size: 30px;
+                transition: all 1s;
+            }
+        }
+    }
+    .item-right {
+        width: 300px;
+        margin: 0 20px 0 10px;
+        .title {
+            color: $black1;
+            font-size: 22px;
+            line-height: 32px;
+            font-family: var(--body-font);
+            font-weight: 600;
+        }
+        p {
+            color: $black3;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+    }
+    &:hover {
+        .item-left {
+            .item-border {
+                .border-bg {
+                    top: 0;
+                }
+                .icon {                    
+                    transform: scaleX(-1);                                        
+                }
+            }
+        } 
+    }
+}
+

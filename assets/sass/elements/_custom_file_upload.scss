@@ -1,0 +1,55 @@
+.file-upload {
+	display: block;
+	font-family: var(--body-font);
+	font-size: 12px;
+}
+
+.file-upload .file-select {
+	display: block;
+	color: #91939D;
+	cursor: pointer;
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	background-color: $white;
+	overflow: hidden;
+	position: relative;
+}
+
+.file-upload .file-select .file-select-button {
+    background-color: $black1;
+    color: $white;
+	display: inline-block;
+	height: 40px;
+    line-height: 40px;
+    width: 9%;
+    text-align: center;
+    float: right;
+}
+
+.file-upload .file-select .file-select-name {
+	line-height: 40px;
+    display: inline-block;
+    padding: 0 10px;
+    width: 90%;
+    background-color: $white6;
+}
+
+.file-upload.active .file-select .file-select-button {
+	background: var(--main-color-one);
+	color: $white;
+	transition: all .2s ease-in-out;
+}
+
+.file-upload .file-select input[type=file] {
+	z-index: 100;
+	cursor: pointer;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+

@@ -1,0 +1,143 @@
+.most-popular-cars {
+    background-color: $white3;
+    position: relative;
+    .nav-tabs{
+        border-bottom: none;    
+        .nav-link {
+            border: none;
+            border-radius: 0;
+            color: $gray;
+            font-size: 22px;
+            line-height: 32px;
+            font-family: var(--body-font);
+            font-weight: 600;
+
+            &.active {
+                color: var(--main-color-one);
+                background-color: transparent;
+            }
+        }
+    }
+    .tab-slider-wrap {
+        display: flex;
+    }
+    .tab-slider-left {
+        width: 30%;
+    }
+    .tab-slider-right {
+        width: 70%;
+        padding-left: 20px;
+    }
+    .h5-tab-slider-left-active, .h5-tab-slider-left-active2{    
+        .slick-slide.slick-current.slick-active {
+            .h5-tab-slider-left-items {
+                box-shadow:  0 0 15px 2px rgba($maincolor, 0.2);
+            }            
+        }
+    }
+    .h5-tab-slider-left-items {
+        display: flex !important;
+        flex-wrap: nowrap;
+        align-items: center;
+        background-color: $white;    
+        margin: 10px;
+        padding: 10px;
+        cursor: pointer;
+        width: 96% !important;
+   
+        .thubm-area {
+            width: 50%;
+            padding: 0 30px;
+        }
+        .content-area {
+            width: 50%;
+            .title {
+                color: $black1;;
+                font-size: 22px;
+                line-height: 32px;
+                font-family: var(--body-font);
+                font-weight: 800;
+                margin-bottom: 0;
+            }
+            .rating {
+                color: var(--main-color-one);
+                .checked {
+                    fill: var(--main-color-one);
+                }
+            }
+            .price {
+                padding-top: 10px;
+                color: $gray;
+                font-size: 16px;
+                line-height: 26px;
+                font-family: var(--body-font);
+                font-weight: 400;
+            }
+        }
+
+    }
+    .h5-tab-slider-left-active {
+        height: 100%;
+    }
+    .h5-tab-slider-right-items {
+        .thumb {
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: contain;
+            display: flex;
+            justify-content: center;        
+        }
+        .content {
+            .title {
+                padding-top: 20px;
+                color: $black1;
+                font-size: 30px;
+                line-height: 30px;
+                font-family: var(--body-font);
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+            .list-item-wrap {
+                list-style: none;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                padding-left: 0;
+                .list-items {
+                    padding: 0 20px;
+                    .icon {
+                        padding-left: 10px;
+                    }
+                }
+            }
+            .main-btn-wrap {
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+
+}
+
+.most-popular-tab-content{
+    position: relative;
+    z-index: 0;
+    .slider-preloader{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(2, 48, 71,.8);
+        content: '';
+        z-index: 1;    
+        display: none;
+        .loader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            height: 100%;
+        }
+    }
+}
